@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{%block content%}
+{{request.get}}
+{% if user.is_authenticated %}
+<h1>List of Patient</h1>
+    <br>
+    <ul>
+        {% for member in object %}
+        <li><a href={%url 'profile' member.id %}>{{member.name}}</a>
+            {{member.age}}
+        </li>
+        {%endfor%}
+    </ul>
+    <a class="btn-success" href={%url 'logout'%}>Logout</a>
+    <a class="btn-success" href={%url 'addpatient'%}>Add Patient</a>
+
+    {% else %}
+    <h1>you need to be logged in to view this page</h1>
+    <a href={%url 'login'%}>login</a>
+    <a href={%url 'register'%}>Register</a>
+    {% endif %}
+{%endblock%}

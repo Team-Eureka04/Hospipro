@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{%block content%}
+    <div>
+        <h4>You are logged out!</h4>
+        <a href={%url 'login'%}>login</a>
+        <a href={%url 'register'%}>Register</a>
+        <a href={%url 'index'%}>Home</a>        
+    </div>
+{%endblock%}
