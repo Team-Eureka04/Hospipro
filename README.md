@@ -16,11 +16,14 @@ This website is a bridge between <b>DOCTOR</b> and <b>PATIENT</b>
 * After adding any feature:
 	* Goto your fork and create a pull request.
 	* We will test your modifications and merge changes.
- 
- ### Note
+	
 
-- This project was done under `24 hours with no pre-preparation`
+### Installation
 
+* Install dependencies
+```sh
+        $ pip3 install -r requirements.txt
+```
 ### screenshots
 ![](/media/img/screenshot1.png)
 ![](/media/img/screenshot3.png)
@@ -31,3 +34,7 @@ This website is a bridge between <b>DOCTOR</b> and <b>PATIENT</b>
 - [@nis130](https://github.com/nis130)
 - [@patrickbro](https://github.com/patrickbro13)
 ---
+ ### Note
+
+- This project was done under `24 hours with no pre-preparation during Exams in FY`
+
