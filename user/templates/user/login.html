@@ -1,13 +1,17 @@
 {% extends "base.html" %}
 {% load crispy_forms_tags %}
 {%block content%}
-<div class="container">
-    <div class="form-group">
-        <form method="POST">
+<div style="background-image: url('https://static.projects.iq.harvard.edu/files/styles/os_files_xxlarge/public/postdoc/files/woman-3187087_1280.jpg?m=1538503074&itok=dbgEjslR');background-size: cover;height:800px;">
+<div class="container mx-auto my-auto">
+        <div class="col-lg-4">
+        <form method="POST" class="form-signin">
+            <h1 class="h3 pt-5 mb-3 font-weight-normal">LOGIN</h1>
             {% csrf_token %}
             {{form|crispy}}
-            <button class="btn btn-primary" type="submit">Login</button>
+            </div>
+            <button class="btn btn-lg btn-primary ml-3" type="submit">Login</button>
+            <p class="mt-5 mb-3 text-muted">&copy; 2019-2020</p>
         </form>
-    </div>
+</div>
 </div>
 {%endblock%}

@@ -7,10 +7,10 @@
         <h1>age: {{object.age}} </h1>
     <br>
     <img src={{object.report.url}} alt="report">
+    <a href={%url 'patient_update' object.id %}>Upadte</a>
     {% else %}
     <h1>you need to be logged in to view this page</h1>
     <a href={%url 'login'%}>login</a>
     <a href={%url 'register'%}>Register</a>
-    <a href={%url 'patient_update'%}>Upadte</a>
     {% endif %}
 {%endblock%}

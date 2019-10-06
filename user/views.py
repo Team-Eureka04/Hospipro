@@ -1,11 +1,13 @@
 from django.shortcuts import render , redirect
 from django.http import HttpResponse
 from django.contrib import messages
+from django.conf import settings
 from .forms import patientregisterform , Userregister
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import patient
 from django.views import generic
 from django.views.generic.edit import FormView
+from django.core.mail import send_mail
 
 
 # Create your views here.
@@ -15,6 +17,11 @@ def patientregister_view(request):
         form = patientregisterform(request.POST)
         if form.is_valid():
             form.save()
+            subject = 'You are registered as Patient at Hospipro'
+            message = 'Hello is conformation mail'
+            from_email = settings.EMAIL_HOST_USER
+            to_list = ['limbaninishit130@gmail.com']
+            send_mail(subject , message , from_email , to_list , fail_silently=True)
             messages.success(request,'Patient created sucessfully')
             return redirect('/')
     else:
