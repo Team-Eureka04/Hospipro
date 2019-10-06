@@ -12,4 +12,4 @@ class Userregister(UserCreationForm):
 class patientregisterform(forms.ModelForm):
     class Meta:
         model = patient
-        fields = ('name','email','age','bloodgroup','diseases','medihistory','alergy')
+        fields = ('name','email','age','bloodgroup','diseases','medihistory','alergy','report')

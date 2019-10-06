@@ -17,11 +17,13 @@ def patientregister_view(request):
         form = patientregisterform(request.POST)
         if form.is_valid():
             form.save()
-            subject = 'You are registered as Patient at Hospipro'
-            message = 'Hello is conformation mail'
-            from_email = settings.EMAIL_HOST_USER
-            to_list = ['limbaninishit130@gmail.com']
-            send_mail(subject , message , from_email , to_list , fail_silently=True)
+            namee = form.cleaned_data['name']
+            emaile = form.cleaned_data['email']
+            subject =  f'{namee} is registered as Patient at Hospipro'
+            message = f'Hello {namee} this is Auto-generated mail you can now view your profile at '
+            from_email = 'teameureka2k19@gmail.com'
+            to_list = [emaile]
+            send_mail(subject , message , from_email , to_list , fail_silently=False)
             messages.success(request,'Patient created sucessfully')
             return redirect('/')
     else:
@@ -37,11 +39,6 @@ def create_user(request):
     else:
         form = Userregister()
     return render(request, 'user/register.html',{'form':form})
-# def profileview(request):
-#     obj = patient.objects.get(id=2)
-#     return render(request ,"user/profile.html" , {
-#     "object":obj,
-#      })
 class profileview(generic.DetailView):
     model = patient
     template_name = 'user/profile.html'

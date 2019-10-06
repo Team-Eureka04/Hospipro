@@ -27,13 +27,13 @@
       font-size: 3.5rem;
     }
   }
-/* body{
+body{
       background-image: url("https://cdn.pixabay.com/photo/2018/04/23/11/13/computer-3343887_1280.jpg");
       background-repeat: no-repeat;
       width:100%;
       height:100%;
       background-size:cover; 
- } */
+ }
 .login{
     background-image: url("https://static.projects.iq.harvard.edu/files/styles/os_files_xxlarge/public/postdoc/files/woman-3187087_1280.jpg?m=1538503074&itok=dbgEjslR");
     background-repeat: no-repeat;
@@ -716,3 +716,33 @@
       background-color: #ffccbc;
     }
   }
+  .register{
+    margin-right: 50vw;
+  }
+}h2 {
+  text-align: center;
+}
+
+table caption {
+    padding: .5em 0;
+}
+
+@media screen and (max-width: 767px) {
+  table caption {
+    border-bottom: 1px solid #ddd;
+  }
+}
+
+.p {
+  text-align: center;
+  padding-top: 140px;
+  font-size: 14px;
+}
+@import url('https://fonts.googleapis.com/css?family=Acme&display=swap');
+ .fo{
+    font-family:'Acme',sans-serif;
+    align-self: center;
+    margin-top: 10%;
+    color:whitesmoke;
+ } 
+
