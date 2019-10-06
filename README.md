@@ -1,5 +1,5 @@
 # <b>HOSPIPRO</b> 
-![](./media/img/Screenshot.png)
+![](/media/img/screenshot.png)
 <hr/>
 This website is a bridge between <b>DOCTOR</b> and <b>PATIENT</b>
 
@@ -21,7 +21,9 @@ This website is a bridge between <b>DOCTOR</b> and <b>PATIENT</b>
 
 - This project was done under `24 hours with no pre-preparation`
 
-
+### screenshots
+![](/media/img/screenshot1.png)
+![](/media/img/screenshot3.png)
 ### Contributors
 
 - [@alisolanki](https://github.com/alisolanki)
