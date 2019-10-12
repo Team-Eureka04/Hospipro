@@ -123,7 +123,7 @@ USE_TZ = True
 #for email
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'teameureka2k19@gmail.com'
+EMAIL_HOST_USER = ''
 EMAIL_PORT = 587
 
 
