@@ -11,7 +11,7 @@ isort==4.3.21
 lazy-object-proxy==1.4.2
 lxml==4.3.3
 mccabe==0.6.1
-Pillow==6.0.0
+pillow==6.2.0
 PyAutoGUI==0.9.42
 pygame==1.9.6
 PyGetWindow==0.0.4
