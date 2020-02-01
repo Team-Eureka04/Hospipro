@@ -26,3 +26,17 @@
 body{
     background-color: black;
 }
+.nav-item{
+    padding-right: 5%;
+    right: 0;
+}
+@media (max-width: 768px) {
+    .nav-link{
+        font-size: 2vw;
+        float: right;
+    }
+    .LOG nav-item{
+        font-size: 2vw;
+        float: right;
+    }
+}

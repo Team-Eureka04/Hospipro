@@ -9,8 +9,7 @@
 
 /* Navigation Bar */
 .navi{
-    align-items: stretch;
-    font-size: 100%;
+    font-size: 5rem;
     float: right;
 }
 .navi h2{
@@ -28,8 +27,8 @@
     font-size:80%;
 }
 .logo{
-    width: 300px;
-    height:75px;
+    width: 30vw;
+    height: 8vw;
 }
 @media only screen and (max-width: 600px) {
     .logo{
@@ -51,6 +50,13 @@ body{
       background-position: center;
 }
 
+.name{
+  padding-top: 2vw;
+  text-align: center;
+  font-size: 3vw;
+  color: whitesmoke;
+}
+
 .login{
     background-image: url("../img/bg_login.jpg");
     background-repeat: no-repeat;
@@ -61,6 +67,12 @@ body{
 
 .h3{
      color: bisque;
+}
+
+#demo .patients{
+  color: #38b85ec0;
+  font-weight: bold;
+  font-size: 2.5vw;
 }
 
 /* Home     */
