@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- meta tags -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Links -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="media/css/stylehome.css">
+
   <title>HospiPro</title>
 </head>
 <body>
-      {% if messages%}
+    {% if messages%}
     {%for message in messages%}
     <p class="alert alert-primary mb-0">{{message}}</p>
     {%endfor%}
@@ -17,7 +21,6 @@
 
     {%block content%}
     {%endblock%}
-
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.7/css/tether.min.css"></script>

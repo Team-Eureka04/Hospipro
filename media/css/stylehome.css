@@ -32,7 +32,7 @@
 @media only screen and (max-width: 600px) {
     .logo{
         width: 100px;
-        height:69px;
+        height: 69px;
     }
   }
   @media (min-width: 768px) {
@@ -49,7 +49,7 @@ body{
 }
 
 .login{
-    background-image: url("https://static.projects.iq.harvard.edu/files/styles/os_files_xxlarge/public/postdoc/files/woman-3187087_1280.jpg?m=1538503074&itok=dbgEjslR");
+    background-image: url("../img/bg_login.jpg");
     background-repeat: no-repeat;
     width:100%;
     height:100%;
