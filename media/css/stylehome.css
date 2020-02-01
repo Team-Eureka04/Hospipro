@@ -1,10 +1,23 @@
+*{
+  margin: 0;
+  padding: 0;
+}
 .pika{
     font-size:4vh;
 }
+
+/* Navigation Bar */
 .navi{
-    margin-left: 55vw;
-    font-size: 150%;
-    
+    align-items: stretch;
+    font-size: 100%;
+    float: right;
+}
+.navi h2{
+  display: inline-block;
+  position: relative;
+  color: #b2ebf2;
+  font-family: sans-serif;
+  text-decoration: #ff0800;
 }
 .carousel{
     margin-top: 0vh;
@@ -28,23 +41,26 @@
     }
   }
 body{
-      background-image: url("https://cdn.pixabay.com/photo/2018/04/23/11/13/computer-3343887_1280.jpg");
+      background-image: url("../img/bg_home.jpg");
       background-repeat: no-repeat;
       width:100%;
       height:100%;
       background-size:cover; 
- }
+}
+
 .login{
     background-image: url("https://static.projects.iq.harvard.edu/files/styles/os_files_xxlarge/public/postdoc/files/woman-3187087_1280.jpg?m=1538503074&itok=dbgEjslR");
     background-repeat: no-repeat;
     width:100%;
     height:100%;
     background-size:cover; 
-    }
+}
+
 .h3{
      color: bisque;
- } 
- /* Home     */
+}
+
+/* Home     */
 /* -- import Roboto Font ---------------------------- */
 @font-face {
     font-family: 'Roboto';
@@ -118,6 +134,7 @@ body{
     font-weight: 900;
     src: local('Roboto Black'), local('Roboto-Black'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmYUtfABc9.ttf) format('truetype');
   }
+  
   /* -- You can use this tables in Bootstrap (v3) projects. -- */
   /* -- Box model ------------------------------- */
   *,
@@ -137,7 +154,6 @@ body{
   html {
     position: relative;
     overflow-x: hidden;
-    margin: 16px;
     padding: 0;
     min-height: 100%;
     font-size: 62.5%;
@@ -719,7 +735,7 @@ body{
   .register{
     margin-right: 50vw;
   }
-}h2 {
+  h2 {
   text-align: center;
 }
 
