@@ -7,7 +7,12 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import patient
 from django.views import generic
 from django.views.generic.edit import FormView
+<<<<<<< HEAD
+from rest_framework import viewsets
+from user.serializers import PatientSerializer
+=======
 from django.core.mail import send_mail
+>>>>>>> upstream/master
 
 
 # Create your views here.
@@ -48,5 +53,9 @@ class patientupdateview(LoginRequiredMixin,generic.UpdateView):
     template_name_suffix = '_update_form'
     def form_valid(self,form):
         return super().form_valid(form)
+
+class apiview(viewsets.ModelViewSet):
+    queryset = patient.objects.all()
+    serializer_class = PatientSerializer
 
 
