@@ -1,13 +1,36 @@
 {% extends "base.html" %}
 {% load crispy_forms_tags %}
 {%block content%}
-<div class="container">
-    <div class="form-group">
-        <form method="POST">
+<div style="background-image: url('https://static.projects.iq.harvard.edu/files/styles/os_files_xxlarge/public/postdoc/files/woman-3187087_1280.jpg?m=1538503074&itok=dbgEjslR');background-size: cover;height:800px;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="home.html">
+                <img  src="media/img/logo.png" alt="" class="logo my-auto" > 
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navi collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+              
+            <li class="nav-item">
+              <a class=" nav-link" href={%url 'addpatient'%}>Add Patient </a>
+            </li>
+            <li class="LOG nav-item">
+                    <a href={%url 'logout'%} class="nav-link">Logout</a>
+                </li> 
+          </ul>
+        </div>
+</nav>
+<div class="container mx-auto my-auto">
+        <div class="col-lg-4">
+        <form method="POST" class="form-signin">
+            <h1 class="h3 pt-5 mb-3 font-weight-normal">LOGIN</h1>
             {% csrf_token %}
             {{form|crispy}}
-            <button class="btn btn-primary" type="submit">Login</button>
+            </div>
+            <button class="btn btn-lg btn-primary ml-3" type="submit">Login</button>
+            <p class="mt-5 mb-3 text-muted">&copy; 2019-2020</p>
         </form>
-    </div>
+</div>
 </div>
 {%endblock%}

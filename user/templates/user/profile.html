@@ -2,15 +2,59 @@
 {%block content%}
 {{request.get}}
 {% if user.is_authenticated %}
-    <h1>
-        name: {{object.name}}</h1>
-        <h1>age: {{object.age}} </h1>
-    <br>
-    <img src={{object.report.url}} alt="report">
+<div class="container-fluid">
+        <div style="background-image:url('https://cdn.pixabay.com/photo/2017/05/28/18/59/group-2351896_960_720.png');background-size: cover;height:200vh;color: #192A56;">
+        <div class="row">
+        </div>
+        <div class="Profile-name">
+        <h2>{{object.name}}'s Profile</h2>
+        </div>
+<div class="container">
+ <div class="row">
+   <div class="col-xs-12">
+     <div class="table-responsive">
+       <table class="table table-bordered text-white bg-dark">
+           <tbody>
+                <tr>
+                        <td>Name</td>
+                        <td>{{object.name}}</td>
+                       </tr>
+             <tr>
+             <td>Age</td>
+             <td>{{object.age}}</td>
+             </tr>
+            <tr>
+             <td>Blood Group</td>
+             <td>{{object.bloodgroup}}</td>
+            </tr>
+            <tr>
+             <td>Medical History</td>
+             <td>{{object.medihistory}}</td>
+             </tr>
+             <tr>
+                    <td>dieseases</td>
+                    <td>{{object.dieseases}}</td>
+                    </tr>
+            <tr>
+             <td>Alergy</td>
+             <td>{{object.allergy}}</td>
+            </tr>
+           </tbody>
+       </table>
+     </div><!--end of .table-responsive-->
+     <div class="col-lg-4">
+            <img src={{object.report.url}} >
+        </div>
+   </div>
+ </div>
+</div>
+
+       </div>
+    </div>  
+    <a href={%url 'patient_update' object.id %}>Upadte</a>
     {% else %}
     <h1>you need to be logged in to view this page</h1>
     <a href={%url 'login'%}>login</a>
     <a href={%url 'register'%}>Register</a>
-    <a href={%url 'patient_update'%}>Upadte</a>
     {% endif %}
 {%endblock%}

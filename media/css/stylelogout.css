@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.navigation{
+    background-color: rgb(231, 222, 222);
+    height: 15%;
+}
+.navigation ul{
+    float: right;
+}
+.navigation ul li{
+    padding: 30px;
+    display: inline-block;
+    font-size: 30px;
+    list-style-type: none;
+}
+.navigation ul li a{
+    float: right;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.7);
+    font-weight: bold;
+}
+body{
+    background-color: black;
+}
+.nav-item{
+    padding-right: 5%;
+    right: 0;
+}
+@media (max-width: 768px) {
+    .nav-link{
+        font-size: 2vw;
+        float: right;
+    }
+    .LOG nav-item{
+        font-size: 2vw;
+        float: right;
+    }
+}

@@ -2,21 +2,89 @@
 {%block content%}
 {{request.get}}
 {% if user.is_authenticated %}
-<h1>List of Patient</h1>
-    <br>
-    <ul>
-        {% for member in object %}
-        <li><a href={%url 'profile' member.id %}>{{member.name}}</a>
-            {{member.age}}
-        </li>
-        {%endfor%}
-    </ul>
-    <a class="btn-success" href={%url 'logout'%}>Logout</a>
-    <a class="btn-success" href={%url 'addpatient'%}>Add Patient</a>
+<!-- <div style="background-image: url('https://cdn.pixabay.com/photo/2018/04/23/11/13/computer-3343887_1280.jpg');
+background-size: cover;height:800px;"> -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="home.html">
+            <img  src="media/img/hospipro_logo.png" alt="HospiPro" class="logo my-auto" > 
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="navi collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href={%url 'addpatient'%}>Add Patient</a>
+            </li>
+            <li class="LOG nav-item">
+              <a class="nav-link" href={%url 'logout'%} class="nav-link">Logout</a>
+            </li> 
+          </ul>
+        </div>
+      </nav>
+      <h1 class="name">Hello, Dr.<font style="color: rgba(209, 195, 70, 0.685); font-weight: bold;">{{user.username}}</font></h1>
 
+      <!--TABLE-->
+  <div id="demo">
+    <h1 class="patients">Patients</h1>         
+      <!-- Responsive table starts here -->
+      <!-- For correct display on small screens you must add 'data-title' to each 'td' in your table -->
+    <div class="table-responsive-vertical shadow-z-1">
+
+            <!-- Table starts here -->
+            <table id="table" class="table table-hover table-mc-light-blue">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Medical History</th>
+                  </tr>
+                </thead>
+                <tbody>
+                {% for member in object %}
+                  <tr>
+                    <td data-title="ID">{{member.id}}</td>
+                    <td data-title="Name">{{member.name}}</td>
+                    <td data-title="Link">
+                      <a href={%url 'profile' member.id %} target="_blank">Profile</a>
+                    </td>
+                  </tr>
+                {%endfor%}
+                </tbody>
+            </table>
+            </div>
+  </div>
     {% else %}
-    <h1>you need to be logged in to view this page</h1>
-    <a href={%url 'login'%}>login</a>
-    <a href={%url 'register'%}>Register</a>
+
+    <!-- <div style="background-image: url('https://cdn.pixabay.com/photo/2018/04/23/11/13/computer-3343887_1280.jpg');
+    background-size: cover;height:800px;"> -->
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="#">
+        <img  src="media/img/hospipro_logo.png" alt="logo" class="logo my-auto" > 
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navi collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-5 mr-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <h2>Login</h2>       
+            </a>
+          <div class="drop dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item " href={%url 'login'%}>Doctor's Login</a>
+                <!-- <a class="dropdown-item " href={%url 'login'%}>Patient's Login</a> -->
+          </div>
+          </li>  
+          <li class="nav-item">
+            <a class=" nav-link" href={%url 'register'%}><h2>Sign Up</h2></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- </div> -->
+
     {% endif %}
 {%endblock%}
