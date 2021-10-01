@@ -30,7 +30,7 @@ This website is a bridge between <b>DOCTOR</b> and <b>PATIENT</b>
 ### Contributors
 
 - [@alisolanki](https://github.com/alisolanki)
-- [@manan001022j](https://github.com/manan001022j)
+- [@mrpandya](https://github.com/mrpandya)
 - [@nis130](https://github.com/nis130)
 - [@patrickbro](https://github.com/patrickbro13)
 ---
