@@ -1,7 +1,7 @@
 # <b>HOSPIPRO</b> 
 ![](/media/img/screenshot.png)
 <hr/>
-This website is a bridge between <b>DOCTOR</b> and <b>PATIENT</b>
+This website is a platform that acts as a bridge between <b>DOCTOR</b> and <b>PATIENT</b>
 
 # <b>Features</b>
 * Secure Login Portal
@@ -18,13 +18,13 @@ This website is a bridge between <b>DOCTOR</b> and <b>PATIENT</b>
 	* We will test your modifications and merge changes.
 	
 
-### Installation
+### Installation Procedure
 
 * Install dependencies
 ```sh
         $ pip3 install -r requirements.txt
 ```
-### screenshots
+### Screenshots
 ![](/media/img/screenshot1.png)
 ![](/media/img/screenshot3.png)
 ### Contributors
@@ -36,5 +36,5 @@ This website is a bridge between <b>DOCTOR</b> and <b>PATIENT</b>
 ---
  ### Note
 
-- This project was done under `24 hours with no pre-preparation during Exams in FY`
+- This project completed under `24 hours with no pre-preparation during Exams in FY`
 
