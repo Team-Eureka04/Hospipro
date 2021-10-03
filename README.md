@@ -36,5 +36,5 @@ This website is a platform that acts as a bridge between <b>DOCTOR</b> and <b>PA
 ---
  ### Note
 
-- This project completed under `24 hours with no pre-preparation during Exams in FY`
+- This project was completed under `24 hours with no pre-preparation during Exams in FY`
 
